@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+	<definition name="cart.default" template="/WEB-INF/layouts/layout.jsp">
+		<put-attribute name="title" value="Index" />
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+
+   <definition name="cart.admin" template="/WEB-INF/layouts/layout.jsp">
+		<put-attribute name="title" value="Index" />
+		<put-attribute name="header" value="/WEB-INF/layout/admin_header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+	
+	<definition name="cart.index" extends="cart.default">
+		<put-attribute name="content" value="/WEB-INF/tiles/index.jsp" />
+	</definition>
+	
+	<definition name="cart.login" extends="cart.default">
+		<put-attribute name="content" value="/WEB-INF/tiles/login.jsp" />
+	</definition>
+	
+	<definition name="cart_secure.home" extends="cart.admin">
+		<put-attribute name="content" value="/WEB-INF/tiles/secure/home.jsp" />
+	</definition>
+	
+	<definition name="cart_secure.manage_users" extends="cart.admin">
+		<put-attribute name="content" value="/WEB-INF/tiles/secure/manage_users.jsp" />
+	</definition>
+	
+	<definition name="cart_secure.addNew" extends="cart.admin">
+		<put-attribute name="content" value="/WEB-INF/tiles/secure/add_new_user.jsp" />
+	</definition>
+
+	<definition name="cart_update_pass_admin" extends="cart.admin">
+		<put-attribute name="content" value="/WEB-INF/tiles/secure/update_pass_admin.jsp" />
+	</definition>
+	
+	<definition name="cart_add_product" extends="cart.admin">
+		<put-attribute name="content" value="/WEB-INF/tiles/secure/add_product.jsp" />
+	</definition>
+	
+	<definition name="cart_products_listing" extends="cart.admin">
+		<put-attribute name="content" value="/WEB-INF/tiles/secure/products_listing.jsp" />
+	</definition>
+	
+	<definition name="cart_edit_product" extends="cart.admin">
+		<put-attribute name="content" value="/WEB-INF/tiles/secure/edit_product.jsp" />
+	</definition>
+
+</tiles-definitions>
